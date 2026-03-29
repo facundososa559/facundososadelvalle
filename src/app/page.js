@@ -1,65 +1,96 @@
-import Image from "next/image";
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Card from "@/components/ui/Cards/Card";
+import Newsletter from "@/components/ui/Newsletter";
+import { articles } from "@/content/blog/articles";
+import { recursos } from "@/content/recursos/recursos";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <main>
+      {/* =============== HERO ================== */}
+      <div className="h-screen flex flex-col items-center justify-center text-center px-[var(--section-padding-inline-sm)] md:px-[var(--section-padding-inline-md)]">
+        <div className="flex flex-col items-center gap-[var(--spacing-xs)] max-w-screen-md">
+          <h1 className="paragraph-separated">FACU SOSA</h1>
+          <h1 className="heading-1 text-[var(--color-text)] max-w-[560px]">
+            Un lugar para artistas y creadores modernos.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="paragraph text-[var(--color-text-muted)] max-w-[560px]">
+            Recursos, ideas y todo lo que aprendo en el camino. Dirigido a personas que buscan adueñarse de su tiempo, su mente y su futuro.
           </p>
+          <a className="heading-6 special-link" href="#newsletter">
+            Quiero unirme al blog
+          </a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </div>
+
+
+
+      {/* ============ RECURSOS ============== */}
+      <Section id="recursos">
+        <div className="text-center mb-[var(--spacing-xl)]">
+          <h2 className="heading-3 text-[var(--color-text)]">Recursos para músicos</h2>
+          <p className="paragraph text-[var(--color-text-muted)]">Herramientas para que músicos de cualquier tipo puedan potenciar su proyecto.</p>
+        </div>
+        <Container columns={2}>
+          {recursos.map((recurso) => (
+            <Card
+              key={recurso.slug}
+              slug={recurso.slug}
+              title={recurso.title}
+              description={recurso.description}
+              date={recurso.type}
+              cover={recurso.cover}
+              coverSize={"h-72"}
+              buttonText="Obtener recurso"
+              basePath="/recursos"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          ))}
+        </Container>
+      </Section>
+
+      {/* ============ BLOG ============== */}
+      <Section id="blog">
+        <div className="text-center mb-[var(--spacing-xl)]">
+          <h2 className="heading-3 text-[var(--color-text)]">Últimos artículos</h2>
+          <p className="paragraph text-[var(--color-text-muted)]">La mente, el arte moderno y el camino de construir una vida auténtica.</p>
         </div>
-      </main>
-    </div>
+        <Container columns={3}>
+          {articles.map((article) => (
+            <Card
+              key={article.slug}
+              slug={article.slug}
+              title={article.title}
+              description={article.description}
+              date={article.date}
+              cover={article.cover}
+              coverSize={"h-56"}
+              buttonText="Leer artículo"
+            />
+          ))}
+        </Container>
+      </Section>
+
+
+      {/* ============ SOBRE MI ============== */}
+      <Section>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-xxl)]">
+
+          <div className="mb-[var(--spacing-xl)]">
+            
+          </div>
+          <div className="flex flex-col gap-[var(--spacing-xs)]">
+            <h2 className="heading-3 text-[var(--color-text)]">Siempre quise hacer esto...</h2>
+            <p className="paragraph text-[var(--color-text-muted)]">En algún momento decidí que mi futuro tenía depender cien por ciento de mí, de mi creatividad y de mi habilidad para construir.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">Ese fue el momento en el que todo esto empezó a tener sentido.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">No es un blog, ni es una marca, es una prueba de que este camino solo existe si uno lo crea.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">Si estás en la misma que yo, llegaste al lugar correcto.</p>
+          </div>
+        </div>
+      </Section>
+
+      <Newsletter />
+    </main>
   );
 }

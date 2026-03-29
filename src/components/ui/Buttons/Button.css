@@ -1,0 +1,23 @@
+.button {
+  font-weight: 500;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  cursor: pointer;
+  display: inline-block;
+  touch-action: manipulation;
+  user-select: none;
+  border: 1.5px solid var(--color-text);
+  border-radius: var(--radius-sm);
+  padding: 10px 28px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: opacity 150ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.button:active {
+  opacity: 0.6;
+}
