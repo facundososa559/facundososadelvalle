@@ -18,7 +18,7 @@ export default function Navbar({ onToggleDark, isDark }) {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 px-[var(--section-padding-inline-sm)] md:px-[var(--section-padding-inline-md)] lg:px-[var(--section-padding-inline-lg)]">
+    <nav className="bg-[var(--color-bg)] absolute top-0 left-0 w-full z-50 px-[var(--section-padding-inline-sm)] md:px-[var(--section-padding-inline-md)] lg:px-[var(--section-padding-inline-lg)]">
       <div className="flex justify-between items-center py-[var(--spacing-sm)]">
 
         {/* BREADCRUMB */}
