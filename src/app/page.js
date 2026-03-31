@@ -17,11 +17,11 @@ export default function Home() {
             Un lugar para artistas y creadores modernos.
           </h1>
           <p className="paragraph text-[var(--color-text-muted)] max-w-[560px]">
-            Recursos, ideas y todo lo que aprendo en el camino. Dirigido a personas que buscan potenciar su mente, su tiempo y su futuro.
+            Recursos, ideas y todo lo que aprendo, dirigido a personas que buscan potenciar su mente, su tiempo y su futuro.
           </p>
           <a className="heading-6 flex items-center gap-[var(--spacing-xxxs)] special-link" href="#newsletter">
             <FiLink strokeWidth={2.5}/>
-            Quiero unirme al blog
+            Quiero unirme
           </a>
         </div>
       </div>
@@ -59,10 +59,10 @@ export default function Home() {
             <h2 className="heading-3 text-[var(--color-text)]">A ver si te suena esto...</h2>
           </div>
           <div className="flex flex-col gap-[var(--spacing-xs)]">
-            <p className="heading-4 text-[var(--color-text)]">Algo en tu mente todo el tiempo te empuja a buscar lo que querés.</p>
-            <p className="paragraph text-[var(--color-text-muted)]">Pero por alguna razón algo te frena.</p>
-            <p className="paragraph text-[var(--color-text-muted)]">No es un blog, ni es una marca, es una prueba de que este camino solo existe si uno lo crea.</p>
-            <p className="paragraph text-[var(--color-text-muted)]">Si estás en la misma que yo, llegaste al lugar correcto.</p>
+            <p className="heading-4 text-[var(--color-text)]">Dedicás mucho tiempo a un proyecto sin rumbo, y "jugar a ser artista" ya no te gusta tanto como antes.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">La mayoría no abandona por falta de talento, sino porque no tienen la claridad suficiente para avanzar con seguridad hacia lo que quieren, y porque no aguantan la presión de construir un futuro por su cuenta.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">La solución a esto no es trabajar más ni dedicar más tiempo. Es entender el juego, cambiar de mentalidad, y diseñar una filosofía y una vida que te lleven a un cambio completo de identidad.</p>
+            <p className="paragraph text-[var(--color-text-muted)]">Si estamos en la misma búsqueda, llegaste al lugar correcto.</p>
           </div>
 
         </div>
@@ -72,7 +72,7 @@ export default function Home() {
       <Section id="blog">
         <div className="text-center mb-[var(--spacing-xl)]">
           <h2 className="heading-3 text-[var(--color-text)]">Últimos artículos</h2>
-          <p className="paragraph text-[var(--color-text-muted)]">La mente, el arte moderno y el camino de construir una vida auténtica.</p>
+          <p className="paragraph text-[var(--color-text-muted)]">La mente, el arte moderno y el camino de construir una vida que se sienta auténtica.</p>
         </div>
         <Container columns={3}>
           {articles.map((article) => (
