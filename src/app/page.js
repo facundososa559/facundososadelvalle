@@ -59,7 +59,7 @@ export default function Home() {
             <h2 className="heading-3 text-[var(--color-text)]">A ver si te suena esto...</h2>
           </div>
           <div className="flex flex-col gap-[var(--spacing-xs)]">
-            <p className="heading-4 text-[var(--color-text)]">Dedicás mucho tiempo a un proyecto sin rumbo, y "jugar a ser artista" ya no te gusta tanto como antes.</p>
+            <p className="heading-4 text-[var(--color-text)]">Dedicás un montón de energía a un proyecto sin rumbo, y "jugar a ser artista" ya no te gusta tanto como antes.</p>
             <p className="paragraph text-[var(--color-text-muted)]">La mayoría no abandona por falta de talento, sino porque no tienen la claridad suficiente para avanzar con seguridad hacia lo que quieren, y porque no aguantan la presión de construir un futuro por su cuenta.</p>
             <p className="paragraph text-[var(--color-text-muted)]">La solución a esto no es trabajar más ni dedicar más tiempo. Es entender el juego, cambiar de mentalidad, y diseñar una filosofía y una vida que te lleven a un cambio completo de identidad.</p>
             <p className="paragraph text-[var(--color-text-muted)]">Si estamos en la misma búsqueda, llegaste al lugar correcto.</p>

@@ -6,11 +6,11 @@ export default function Newsletter() {
       <div className="max-w-[600px] mx-auto flex flex-col items-center text-center gap-[var(--spacing-md)]">
         
         <div className="flex flex-col gap-[var(--spacing-xxxs)]">
-          <p className="paragraph-sm text-[var(--color-text-muted)]">
+          <p className="paragraph-separated text-[var(--color-text-muted)]">
             BLOG
           </p>
           <h2 className="heading-3 text-[var(--color-text)]">
-            Te sumo al blog si querés saber lo que está pasando. Te espero ahí.
+            Todo lo que aprendo en el camino lo escribo acá en mi blog.
           </h2>
         </div>
 
